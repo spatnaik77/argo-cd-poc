@@ -14,7 +14,20 @@ microk8s kubectl port-forward service/echo-service 8080:8080
 
 -------Argo CD-------------------
 
-microk8s kubectl create namespace argocd
+kubectl create namespace argocd
 
-microk8s kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+Access the UI - http://localhost:8080
+User name : admin
+password : result of the command - kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+
+Create an application
+
+
+
+
+
 
