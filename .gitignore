@@ -1,4 +1,12 @@
 # Compiled class file
+.mvn
+
+.vscode
+
+.idea
+
+.DS_Store
+
 *.class
 
 # Log file
