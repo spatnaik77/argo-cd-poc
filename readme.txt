@@ -8,9 +8,9 @@ docker push spatnaik77/echo-service:latest
 
 --------Microk8s cluster--------
 
-microk8s kubectl apply -f /Users/siddharthpatnaik/Documents/siddharth/mygithub/argo-cd-poc/echo-service-k8s-config/deployment-service.yaml
+kubectl apply -f /Users/siddharthpatnaik/Documents/siddharth/mygithub/argo-cd-poc/echo-service-k8s-config/deployment-service.yaml
 
-microk8s kubectl port-forward service/echo-service 8080:8080
+kubectl port-forward service/echo-service 8080:8080
 
 -------Argo CD-------------------
 
